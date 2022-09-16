@@ -8,8 +8,8 @@ public class Circle {
 
     public Circle() {
         Random rnd = new Random();
-        this.centre = new Point(0.0, 0.0);
-        this.r = rnd.nextInt();
+        this.centre = new Point(rnd.nextInt(5,10), rnd.nextInt(2,5));
+        this.r = rnd.nextInt(10);
     }
 
     public Circle(Point centre, int r) {
@@ -17,6 +17,6 @@ public class Circle {
     }
 
     public String toString() {
-        return "r=" + r;
+        return "centre in point: (" + centre.getX() + "," + centre.getY() + "), r = " + r;
     }
 }
